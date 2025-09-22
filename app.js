@@ -10,11 +10,18 @@ function agregarAmigo(){
         listAmigos.push(inputAmigo);
         console.log(inputAmigo);
         ulListaAmigos.innerHTML += `<li>${inputAmigo}</li>`; 
+        
     }else{
         alert("Por favor, ingrese el nombre de un amigo.");
         return;
         } 
+    document.getElementById("amigo").value = "";
     console.log(listAmigos);
+}
+
+function sortearAmigo(){
     
-    
+    let amigoSorteado = Math.floor(Math.random() * listAmigos.length);
+    resultado.innerHTML = `<h2>El amigo sorteado es: ${listAmigos[amigoSorteado]}</h2>`;
+    console.log(listAmigos[amigoSorteado]);
 }
